@@ -98,7 +98,7 @@ describe('TAT Customer Service Center', () => {
   it('selects a file from the fixtures folder', ()=> {
     cy.get('input[type="file"')
       .selectFile('cypress/fixtures/example.json', {action: "drag-drop"})
-      .should('have.length', 1)
+      .should('have.length', 3)
   })
 
   it('verifies that the privacy policy page opens in another tab without the need for a click', ()=> {
@@ -110,7 +110,7 @@ describe('TAT Customer Service Center', () => {
     cy.get('#white-background').should('contain', 'We do not save')
   })
 
-  it.only('independently test the privacy policy page', ()=> {
+  it('independently test the privacy policy page', ()=> {
     cy.visit("./src/privacy.html")
     cy.get('#title').should('contain', 'TAT CSC - Privacy Policy')
   })
