@@ -98,7 +98,7 @@ describe('TAT Customer Service Center', () => {
   it('selects a file from the fixtures folder', ()=> {
     cy.get('input[type="file"')
       .selectFile('cypress/fixtures/example.json', {action: "drag-drop"})
-      .should('have.length', 3)
+      .should('have.length', 1)
   })
 
   it('verifies that the privacy policy page opens in another tab without the need for a click', ()=> {
